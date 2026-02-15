@@ -48,10 +48,10 @@ const LactopulgaWelcome = () => (
         <p className="lactopulga-sub">~* clica ai pra conhecer a gente *~</p>
       </div>
     </div>
-    <div className="welcome-gifs">
-      <img src={GIFS.fire2} alt="fire" className="welcome-gif" />
+  <div className="welcome-gifs">
+      <img src={GIFS.fire} alt="fire" className="welcome-gif" />
       <img src={GIFS.sparkle} alt="sparkle" className="welcome-gif" />
-      <img src={GIFS.fire2} alt="fire" className="welcome-gif" />
+      <img src={GIFS.fire} alt="fire" className="welcome-gif" />
     </div>
   </div>
 );
