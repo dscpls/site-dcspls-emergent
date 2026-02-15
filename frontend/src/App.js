@@ -258,9 +258,9 @@ const MembrosPage = () => (
         </div>
         
         <div className="gif-decoration">
-          <img src={GIFS.fire2} alt="fire" className="bottom-gif" />
-          <img src={GIFS.sparkle} alt="sparkle" className="bottom-gif" />
-          <img src={GIFS.fire2} alt="fire" className="bottom-gif" />
+          <img src={GIFS.fire} alt="fire" className="bottom-gif" />
+          <img src={GIFS.skull} alt="skull" className="bottom-gif" />
+          <img src={GIFS.fire} alt="fire" className="bottom-gif" />
         </div>
       </div>
     </div>
