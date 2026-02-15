@@ -14,27 +14,30 @@ Site para banda de hip-hop alternativo DISCÍPULOS, inspirada em BROCKHAMPTON. E
 - Comunidade de música independente
 
 ## Core Requirements ✅
-1. ✅ Home page com logo, título, e seção de boas-vindas do Lactopulga
-2. ✅ Navegação entre páginas (Home, Sobre, Discografia, Membros, Merch)
+1. ✅ Home page com seção de boas-vindas do Lactopulga (único)
+2. ✅ Navegação entre páginas (Home, Sobre, Discografia, Vídeos, Membros, Merch)
 3. ✅ Estética MySpace 2000s (marquee, bordas neon, emojis animados)
 4. ✅ Paleta ciano/amarelo inspirada no álbum Fases
-5. ✅ Integração Spotify embed
+5. ✅ Integração Spotify embed + Now Playing fixo
 6. ✅ Links sociais (Instagram, TikTok, YouTube, Spotify)
 7. ✅ Seção membros com 6 integrantes
 8. ✅ Link externo para loja de merch
+9. ✅ Página de Vídeos com 3 clipes YouTube
 
 ## O Que Foi Implementado (15/02/2026)
 
 ### Páginas
-- **Home**: Lactopulga welcome, logo, título, Spotify player, social links
+- **Home**: Lactopulga welcome (único), título, social links, emojis animados
 - **Sobre**: História da banda, stats (6 membros, 5 estados)
 - **Discografia**: Spotify embed grande, CTA para Spotify
+- **Vídeos**: 3 clipes YouTube (farol, flores, eros)
 - **Membros**: Grid estilo "Top 6" com Henriz, Gebriel, BRAMA VH$, Bru Sant, diogocaster, Nilhipp
 - **Merch**: Redireciona para www.dscpls.shop
 
 ### Features Visuais
 - Marquee animado no topo
 - Emojis animados CSS (🔥⭐✨💖🎵💀)
+- Now Playing fixo no canto inferior direito
 - Efeito CRT overlay
 - Cursor crosshair
 - Scrollbar customizada
@@ -42,14 +45,14 @@ Site para banda de hip-hop alternativo DISCÍPULOS, inspirada em BROCKHAMPTON. E
 
 ### Integrações
 - Spotify Artist Embed (ID: 5C5ggWPG2OVPxwd6QDdp61)
+- YouTube Embeds (3 vídeos)
 - Links redes sociais configurados
 
 ## Backlog
-- P1: Adicionar galeria de fotos/vídeos
 - P1: Seção de shows/agenda
-- P2: Integração com YouTube Music
 - P2: Newsletter signup
-- P3: Player de música customizado
+- P2: Galeria de fotos
+- P3: Mais vídeos
 
 ## Próximos Passos
 1. Conectar domínio customizado
