@@ -150,6 +150,11 @@ body {
   z-index: 1000;
   border-radius: 8px;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.now-playing.closed {
+  width: auto;
 }
 
 .np-header {
@@ -158,6 +163,11 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  user-select: none;
+}
+
+.np-header:hover {
+  filter: brightness(1.1);
 }
 
 .np-icon {
@@ -168,6 +178,13 @@ body {
 .np-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
+  color: var(--bg-darker);
+  font-weight: bold;
+}
+
+.np-toggle {
+  margin-left: auto;
+  font-size: 14px;
   color: var(--bg-darker);
   font-weight: bold;
 }
