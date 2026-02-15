@@ -158,12 +158,12 @@ const DiscografiaPage = () => (
         
         <div className="spotify-full" data-testid="spotify-full-player">
           <iframe 
-            style={{ borderRadius: "0px", border: "2px solid #ff00ff" }}
+            style={{ borderRadius: "0px", border: "none" }}
             src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0" 
             width="100%" 
-            height="500" 
+            height="450" 
             frameBorder="0" 
-            allowFullScreen="" 
+            allowFullScreen 
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"
             title="Spotify Full Player"
@@ -174,6 +174,11 @@ const DiscografiaPage = () => (
           <a href={BAND_INFO.spotify} target="_blank" rel="noopener noreferrer" className="cta-btn" data-testid="spotify-cta">
             ▶ ABRIR NO SPOTIFY ◀
           </a>
+        </div>
+        
+        <div className="gif-row" style={{ marginTop: '20px' }}>
+          <img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" alt="gif" className="decorative-gif small" />
+          <img src="https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif" alt="gif" className="decorative-gif small" />
         </div>
       </div>
     </div>
