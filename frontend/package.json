@@ -1,7 +1,8 @@
 {
-  "name": "frontend",
+  "name": "site-discipulos",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dscpls.github.io/site-dcspls-emergent",
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@radix-ui/react-accordion": "^1.2.8",
