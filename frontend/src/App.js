@@ -14,13 +14,47 @@ const BAND_INFO = {
 };
 
 const MEMBERS = [
-  { name: "Henriz", role: "Vocalista & Liricista", location: "MS", color: "#39ff14" },
-  { name: "Gebriel", role: "Vocalista & Liricista", location: "SP", color: "#ff00ff" },
-  { name: "BRAMA VH$", role: "Vocalista, Prod & Designer", location: "Pará", color: "#00ffff" },
-  { name: "Bru Sant", role: "Produtor", location: "SP", color: "#ffff00" },
-  { name: "diogocaster", role: "Produtor", location: "PI", color: "#ff6600" },
-  { name: "Nilhipp", role: "Produtor", location: "PR", color: "#ff0066" }
+  { name: "Henriz", role: "Vocalista & Liricista", location: "MS", color: "#00CED1" },
+  { name: "Gebriel", role: "Vocalista & Liricista", location: "SP", color: "#FFD700" },
+  { name: "BRAMA VH$", role: "Vocalista, Prod & Designer", location: "Pará", color: "#40E0D0" },
+  { name: "Bru Sant", role: "Produtor", location: "SP", color: "#F0E68C" },
+  { name: "diogocaster", role: "Produtor", location: "PI", color: "#00CED1" },
+  { name: "Nilhipp", role: "Produtor", location: "PR", color: "#FFD700" }
 ];
+
+// 2000s GIFs
+const GIFS = {
+  fire: "https://web.archive.org/web/20091027065852/http://geocities.com/js_source/ani_fire1.gif",
+  fire2: "https://media.giphy.com/media/l0HU2H4Y4m3CM9Cpy/giphy.gif",
+  stars: "https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif",
+  sparkle: "https://media.giphy.com/media/l378bu6ZYmzS6nBGU/giphy.gif",
+  music: "https://media.giphy.com/media/tqfS3mgQU28ko/giphy.gif",
+  fire3: "https://media.giphy.com/media/3ohs7YMlUQ6Jk8w0rS/giphy.gif",
+  hearts: "https://media.giphy.com/media/l0MYAs5E2oIDCq9So/giphy.gif",
+  butterfly: "https://media.giphy.com/media/3o7TKMeCOV3oXSb5bq/giphy.gif"
+};
+
+// Lactopulga Welcome Component
+const LactopulgaWelcome = () => (
+  <div className="lactopulga-section" data-testid="lactopulga-welcome">
+    <div className="lactopulga-container">
+      <div className="lactopulga-avatar">
+        <img src={BAND_INFO.logo} alt="Lactopulga" className="lactopulga-img" />
+      </div>
+      <div className="speech-bubble">
+        <p className="lactopulga-text">
+          oii :p eu sou o <span className="highlight">lactopulga</span>, seja bem-vindo ao nosso site! :D
+        </p>
+        <p className="lactopulga-sub">~* clica ai pra conhecer a gente *~</p>
+      </div>
+    </div>
+    <div className="welcome-gifs">
+      <img src={GIFS.fire2} alt="fire" className="welcome-gif" />
+      <img src={GIFS.sparkle} alt="sparkle" className="welcome-gif" />
+      <img src={GIFS.fire2} alt="fire" className="welcome-gif" />
+    </div>
+  </div>
+);
 
 // Navigation Component
 const NavBar = ({ currentPage, setCurrentPage }) => (
@@ -44,26 +78,28 @@ const NavBar = ({ currentPage, setCurrentPage }) => (
 const HomePage = () => (
   <div className="page home-page" data-testid="home-page">
     <div className="hero">
+      <LactopulgaWelcome />
+      
       <div className="logo-container">
-        <img src={BAND_INFO.logo} alt="DISCÍPULOS" className="band-logo glitch" data-testid="band-logo" />
+        <img src={BAND_INFO.logo} alt="DISCÍPULOS" className="band-logo" data-testid="band-logo" />
       </div>
       
-      <h1 className="band-title glitch-text" data-testid="band-title">DISCÍPULOS</h1>
+      <h1 className="band-title" data-testid="band-title">DISCÍPULOS</h1>
       <p className="tagline blink">★ HIP-HOP ALTERNATIVO ★</p>
       
       <div className="gif-container">
-        <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="gif" className="decorative-gif" />
-        <img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" alt="gif" className="decorative-gif" />
+        <img src={GIFS.fire2} alt="fire" className="decorative-gif" />
+        <img src={GIFS.stars} alt="stars" className="decorative-gif" />
+        <img src={GIFS.fire2} alt="fire" className="decorative-gif" />
       </div>
       
       <div className="spotify-embed" data-testid="spotify-embed">
         <iframe 
-          style={{ borderRadius: "0px", border: "2px solid #39ff14" }}
           src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0" 
           width="100%" 
-          height="352" 
+          height="152" 
           frameBorder="0" 
-          allowFullScreen="" 
+          allowFullScreen 
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
           loading="lazy"
           title="Spotify Player"
@@ -78,9 +114,9 @@ const HomePage = () => (
       </div>
       
       <div className="gif-row">
-        <img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif" alt="gif" className="decorative-gif small" />
-        <img src="https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif" alt="gif" className="decorative-gif small" />
-        <img src="https://media.giphy.com/media/l378bu6ZYmzS6nBGU/giphy.gif" alt="gif" className="decorative-gif small" />
+        <img src={GIFS.butterfly} alt="butterfly" className="decorative-gif small" />
+        <img src={GIFS.hearts} alt="hearts" className="decorative-gif small" />
+        <img src={GIFS.sparkle} alt="sparkle" className="decorative-gif small" />
       </div>
     </div>
   </div>
@@ -100,7 +136,7 @@ const SobrePage = () => (
       </div>
       <div className="window-content">
         <div className="about-content">
-          <img src="https://media.giphy.com/media/l0HlvtIPzPdt2usKs/giphy.gif" alt="gif" className="about-gif" />
+          <img src={GIFS.fire2} alt="fire" className="about-gif" />
           
           <h2 className="section-title">QUEM SOMOS</h2>
           <p className="about-text">
@@ -130,7 +166,7 @@ const SobrePage = () => (
             </div>
           </div>
           
-          <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="gif" className="about-gif" />
+          <img src={GIFS.sparkle} alt="sparkle" className="about-gif" />
         </div>
       </div>
     </div>
@@ -151,14 +187,13 @@ const DiscografiaPage = () => (
       </div>
       <div className="window-content">
         <div className="disco-intro">
-          <img src="https://media.giphy.com/media/tqfS3mgQU28ko/giphy.gif" alt="music" className="disco-gif" />
+          <img src={GIFS.music} alt="music" className="disco-gif" />
           <p className="disco-text">OUÇA NOSSA MÚSICA NO SPOTIFY</p>
-          <img src="https://media.giphy.com/media/tqfS3mgQU28ko/giphy.gif" alt="music" className="disco-gif" />
+          <img src={GIFS.music} alt="music" className="disco-gif" />
         </div>
         
         <div className="spotify-full" data-testid="spotify-full-player">
           <iframe 
-            style={{ borderRadius: "0px", border: "none" }}
             src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0" 
             width="100%" 
             height="450" 
@@ -177,8 +212,9 @@ const DiscografiaPage = () => (
         </div>
         
         <div className="gif-row" style={{ marginTop: '20px' }}>
-          <img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" alt="gif" className="decorative-gif small" />
-          <img src="https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif" alt="gif" className="decorative-gif small" />
+          <img src={GIFS.fire2} alt="fire" className="decorative-gif small" />
+          <img src={GIFS.sparkle} alt="sparkle" className="decorative-gif small" />
+          <img src={GIFS.fire2} alt="fire" className="decorative-gif small" />
         </div>
       </div>
     </div>
@@ -222,8 +258,9 @@ const MembrosPage = () => (
         </div>
         
         <div className="gif-decoration">
-          <img src="https://media.giphy.com/media/3ohhweiVB36rAlqVCE/giphy.gif" alt="gif" className="bottom-gif" />
-          <img src="https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif" alt="gif" className="bottom-gif" />
+          <img src={GIFS.fire2} alt="fire" className="bottom-gif" />
+          <img src={GIFS.sparkle} alt="sparkle" className="bottom-gif" />
+          <img src={GIFS.fire2} alt="fire" className="bottom-gif" />
         </div>
       </div>
     </div>
@@ -277,7 +314,7 @@ function App() {
         <p>© 2024 DISCÍPULOS - TODOS OS DIREITOS RESERVADOS</p>
         <p className="footer-sub">MADE WITH ♥ AND NOSTALGIA</p>
         <div className="visitor-counter">
-          <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="gif" className="counter-gif" />
+          <img src={GIFS.sparkle} alt="sparkle" className="counter-gif" />
           <span>VISITANTE #000{Math.floor(Math.random() * 9999)}</span>
         </div>
       </footer>
