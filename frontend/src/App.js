@@ -14,12 +14,12 @@ const BAND_INFO = {
 };
 
 const MEMBERS = [
-  { name: "Henriz", role: "Vocalista & Liricista", location: "MS", color: "#00CED1" },
-  { name: "Gebriel", role: "Vocalista & Liricista", location: "SP", color: "#FFD700" },
-  { name: "BRAMA VH$", role: "Vocalista, Prod & Designer", location: "Pará", color: "#40E0D0" },
-  { name: "Bru Sant", role: "Produtor", location: "SP", color: "#F0E68C" },
-  { name: "diogocaster", role: "Produtor", location: "PI", color: "#00CED1" },
-  { name: "Nilhipp", role: "Produtor", location: "PR", color: "#FFD700" }
+  { name: "Henriz", role: "Vocalista & Liricista", location: "MS", color: "#00CED1", instagram: "https://instagram.com/gqnzaroli" },
+  { name: "Gebriel", role: "Vocalista & Liricista", location: "SP", color: "#FFD700", instagram: "https://instagram.com/o.garibel" },
+  { name: "BRAMA VH$", role: "Vocalista, Prod & Designer", location: "Pará", color: "#40E0D0", instagram: "https://instagram.com/brama.vhs" },
+  { name: "Bru Sant", role: "Produtor", location: "SP", color: "#F0E68C", instagram: "https://instagram.com/bruno_thxx" },
+  { name: "diogocaster", role: "Produtor", location: "PI", color: "#00CED1", instagram: "https://instagram.com/diogosmpo" },
+  { name: "Nilhipp", role: "Produtor", location: "PR", color: "#FFD700", instagram: null }
 ];
 
 const VIDEOS = [
