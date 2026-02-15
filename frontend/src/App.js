@@ -88,10 +88,12 @@ const HomePage = () => (
       
       <div className="spotify-embed" data-testid="spotify-embed">
         <iframe 
-          src={BAND_INFO.spotifyEmbed}
+          style={{borderRadius: "12px"}}
+          src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0"
           width="100%" 
           height="152" 
           frameBorder="0" 
+          allowFullScreen
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
           loading="lazy"
           title="Spotify Player"
