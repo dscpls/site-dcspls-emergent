@@ -28,27 +28,34 @@ const VIDEOS = [
   { id: "8evJDQapvHs", title: "DISCÍPULOS - Vídeo 3" }
 ];
 
-// Now Playing Component (Fixed position)
-const NowPlaying = () => (
-  <div className="now-playing" data-testid="now-playing">
-    <div className="np-header">
-      <span className="np-icon">♫</span>
-      <span className="np-title">NOW PLAYING</span>
+// Now Playing Component (Fixed position with toggle)
+const NowPlaying = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <div className={`now-playing ${isOpen ? 'open' : 'closed'}`} data-testid="now-playing">
+      <div className="np-header" onClick={() => setIsOpen(!isOpen)} style={{cursor: 'pointer'}}>
+        <span className="np-icon">♫</span>
+        <span className="np-title">NOW PLAYING</span>
+        <span className="np-toggle">{isOpen ? '✕' : '▲'}</span>
+      </div>
+      {isOpen && (
+        <div className="np-content">
+          <iframe 
+            src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0"
+            width="100%" 
+            height="80" 
+            frameBorder="0" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy"
+            title="Now Playing"
+            style={{borderRadius: "8px"}}
+          />
+        </div>
+      )}
     </div>
-    <div className="np-content">
-      <iframe 
-        src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0"
-        width="100%" 
-        height="80" 
-        frameBorder="0" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy"
-        title="Now Playing"
-        style={{borderRadius: "8px"}}
-      />
-    </div>
-  </div>
-);
+  );
+};
 
 // Lactopulga Welcome Component
 const LactopulgaWelcome = () => (
