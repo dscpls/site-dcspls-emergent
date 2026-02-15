@@ -1,0 +1,151 @@
+{
+  "project_name": "DISCÍPULOS - Band Website",
+  "design_philosophy": {
+    "identity": "E1 - The Anti-AI Designer",
+    "core_concept": "MySpace 2000s Revival / Digital Brutalism / Y2K Chaos",
+    "emotional_tone": "Nostalgic, Raw, Energetic, Rebellious, DIY",
+    "visual_style": "Maximalist, Neon on Black, Pixelated, Glitchy",
+    "anti_patterns": [
+      "No clean, sterile SaaS layouts",
+      "No subtle gradients (use hard gradients or solid colors)",
+      "No 'Inter' font anywhere",
+      "No generous whitespace (cram things together)",
+      "No rounded corners > 4px (prefer sharp 0px)"
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "VT323, 'Press Start 2P', monospace",
+      "body": "'Courier New', 'Lucida Console', monospace",
+      "accent": "Arial, Helvetica, sans-serif"
+    },
+    "rules": [
+      "Headings must be LARGE and PIXELATED",
+      "Use uppercase for emphasis",
+      "Mix serif and sans-serif for chaotic effect",
+      "Text shadows are mandatory for headings (e.g., neon glow)"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": "#000000",
+      "surface": "#111111",
+      "primary": "#39ff14",
+      "secondary": "#ff00ff",
+      "accent": "#00ffff",
+      "warning": "#ffff00",
+      "text_main": "#ffffff",
+      "text_muted": "#cccccc",
+      "border_neon": "#39ff14"
+    },
+    "gradients": {
+      "matrix": "linear-gradient(180deg, rgba(57, 255, 20, 0.2) 0%, rgba(0, 0, 0, 0) 100%)",
+      "rainbow": "linear-gradient(90deg, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Broken/Chaotic)",
+    "container_style": "Fixed width 800px-1000px centered (optional) or Full Chaos",
+    "spacing": {
+      "philosophy": "Tight and cluttered",
+      "scale": "p-1, p-2, p-4 (keep it dense)"
+    },
+    "borders": "2px solid neon colors (green, pink, blue)",
+    "z_index_strategy": "Layered windows, popups on top of content"
+  },
+  "components": {
+    "buttons": {
+      "style": "Windows 95 style or Neon Wireframe",
+      "hover": "Invert colors or Glitch effect",
+      "border_radius": "0px"
+    },
+    "cards": {
+      "style": "Solid black background with neon border",
+      "effect": "Static noise background on hover"
+    },
+    "marquee": {
+      "usage": "Mandatory for announcements and random thoughts",
+      "style": "Neon text on black background"
+    },
+    "images": {
+      "style": "Dithered, grayscale, or high contrast",
+      "border": "Double border or dashed lines"
+    },
+    "cursor": {
+      "style": "Custom crosshair or pixel hand",
+      "css": "cursor: crosshair;"
+    }
+  },
+  "assets": {
+    "logo": "https://i.imgur.com/0lwwt3N.jpeg",
+    "backgrounds": [
+      "https://images.unsplash.com/photo-1657406307838-816f84a1632f?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1765410850770-7d7bc8928f17?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ],
+    "textures": [
+      "https://images.unsplash.com/photo-1767479524565-b1b78fa2bd24?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1764263996369-141150443ebf?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ],
+    "retro_tech": [
+      "https://images.unsplash.com/photo-1629138144227-c157c21e1674?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1746971756351-504ec93b132f?crop=entropy&cs=srgb&fm=jpg&q=85"
+    ]
+  },
+  "pages": {
+    "home": {
+      "structure": "Hero section with band logo (glitching), Marquee scrolling news, 'Enter Site' button (optional), chaotic collage of GIFs and stickers.",
+      "elements": ["Logo", "Marquee", "Spotify Embed", "Social Links"]
+    },
+    "members": {
+      "structure": "Grid layout resembling MySpace 'Top 8'. Each member card has a pixelated photo and role.",
+      "data": [
+        {"name": "Henriz", "role": "Vocalista, Liricista", "location": "MS"},
+        {"name": "Gebriel", "role": "Vocalista, Liricista", "location": "SP"},
+        {"name": "BRAMA VH$", "role": "Vocalista, Prod, Designer", "location": "Pará"},
+        {"name": "Bru Sant", "role": "Produtor", "location": "SP"},
+        {"name": "diogocaster", "role": "Produtor", "location": "PI"},
+        {"name": "Nilhipp", "role": "Produtor", "location": "PR"}
+      ]
+    },
+    "discography": {
+      "structure": "List of albums with cover art (placeholder or generic vinyl/CD image) and Spotify play buttons.",
+      "style": "Table layout with visible borders."
+    },
+    "merch": {
+      "structure": "Redirects to external shop, but show a teaser banner.",
+      "link": "www.dscpls.shop"
+    }
+  },
+  "motion": {
+    "animations": [
+      "Blink (text-decoration: blink equivalent)",
+      "Marquee (scrolling text)",
+      "Shake/Jitter on hover",
+      "Glitch effect on load"
+    ],
+    "libraries": ["framer-motion", "react-fast-marquee"]
+  },
+  "accessibility": {
+    "contrast": "Ensure neon text on black is readable (APCA check).",
+    "reduced_motion": "Disable flashing/blinking for 'prefers-reduced-motion'."
+  },
+  "instructions_to_main_agent": [
+    "1. Install 'vt323' and 'press-start-2p' from Google Fonts.",
+    "2. Set body background to #000000 immediately.",
+    "3. Create a 'Layout' component that includes the CRT scanline effect overlay (pointer-events-none).",
+    "4. Use 'border-2 border-green-500' (or pink/blue) for almost all containers.",
+    "5. Do not use standard Shadcn cards. Build raw divs with borders.",
+    "6. Implement the 'Marquee' component at the top or bottom of the screen.",
+    "7. Use the provided image URLs for backgrounds and textures to add depth.",
+    "8. Ensure all interactive elements have hover states that are aggressive (invert, glow, shake)."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI slop' aesthetic (generic clean UI).",
+    "Dark colors look good when used independently without gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable (or in this case, intentionally cramped for chaos).",
+    "Subtle grain textures, noise overlays, custom cursors.",
+    "All interactive elements MUST include data-testid attribute."
+  ]
+}
