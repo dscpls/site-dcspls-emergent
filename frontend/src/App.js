@@ -88,9 +88,9 @@ const HomePage = () => (
       <p className="tagline blink">★ HIP-HOP ALTERNATIVO ★</p>
       
       <div className="gif-container">
-        <img src={GIFS.fire2} alt="fire" className="decorative-gif" />
-        <img src={GIFS.stars} alt="stars" className="decorative-gif" />
-        <img src={GIFS.fire2} alt="fire" className="decorative-gif" />
+        <img src={GIFS.fire} alt="fire" className="decorative-gif" />
+        <img src={GIFS.sparkle} alt="sparkle" className="decorative-gif" />
+        <img src={GIFS.fire} alt="fire" className="decorative-gif" />
       </div>
       
       <div className="spotify-embed" data-testid="spotify-embed">
