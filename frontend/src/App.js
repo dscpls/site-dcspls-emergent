@@ -22,16 +22,16 @@ const MEMBERS = [
   { name: "Nilhipp", role: "Produtor", location: "PR", color: "#FFD700" }
 ];
 
-// 2000s GIFs
+// 2000s GIFs - Classic MySpace era
 const GIFS = {
-  fire: "https://web.archive.org/web/20091027065852/http://geocities.com/js_source/ani_fire1.gif",
-  fire2: "https://media.giphy.com/media/l0HU2H4Y4m3CM9Cpy/giphy.gif",
-  stars: "https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif",
-  sparkle: "https://media.giphy.com/media/l378bu6ZYmzS6nBGU/giphy.gif",
-  music: "https://media.giphy.com/media/tqfS3mgQU28ko/giphy.gif",
-  fire3: "https://media.giphy.com/media/3ohs7YMlUQ6Jk8w0rS/giphy.gif",
-  hearts: "https://media.giphy.com/media/l0MYAs5E2oIDCq9So/giphy.gif",
-  butterfly: "https://media.giphy.com/media/3o7TKMeCOV3oXSb5bq/giphy.gif"
+  fire: "https://i.gifer.com/XZ5V.gif",
+  fire2: "https://i.gifer.com/76Za.gif",
+  stars: "https://i.gifer.com/1FwE.gif",
+  sparkle: "https://i.gifer.com/5RZ.gif",
+  music: "https://i.gifer.com/E2PT.gif",
+  skull: "https://i.gifer.com/XuDH.gif",
+  rainbow: "https://i.gifer.com/7Txr.gif",
+  butterfly: "https://i.gifer.com/KJB.gif"
 };
 
 // Lactopulga Welcome Component
