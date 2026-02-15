@@ -212,9 +212,9 @@ const DiscografiaPage = () => (
         </div>
         
         <div className="gif-row" style={{ marginTop: '20px' }}>
-          <img src={GIFS.fire2} alt="fire" className="decorative-gif small" />
-          <img src={GIFS.sparkle} alt="sparkle" className="decorative-gif small" />
-          <img src={GIFS.fire2} alt="fire" className="decorative-gif small" />
+          <img src={GIFS.fire} alt="fire" className="decorative-gif small" />
+          <img src={GIFS.music} alt="music" className="decorative-gif small" />
+          <img src={GIFS.fire} alt="fire" className="decorative-gif small" />
         </div>
       </div>
     </div>
