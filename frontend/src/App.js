@@ -24,14 +24,14 @@ const MEMBERS = [
 
 // 2000s GIFs - Classic MySpace era
 const GIFS = {
-  fire: "https://i.gifer.com/XZ5V.gif",
-  fire2: "https://i.gifer.com/76Za.gif",
-  stars: "https://i.gifer.com/1FwE.gif",
-  sparkle: "https://i.gifer.com/5RZ.gif",
-  music: "https://i.gifer.com/E2PT.gif",
-  skull: "https://i.gifer.com/XuDH.gif",
-  rainbow: "https://i.gifer.com/7Txr.gif",
-  butterfly: "https://i.gifer.com/KJB.gif"
+  fire: "https://media1.tenor.com/m/y0Z54DeAx5gAAAAC/fire.gif",
+  fire2: "https://media1.tenor.com/m/kxT2-SqKj4wAAAAC/fire-flames.gif",
+  stars: "https://media1.tenor.com/m/AaFo4lz4m-4AAAAd/stars-twinkle.gif",
+  sparkle: "https://media1.tenor.com/m/UhzY87gPzDUAAAAC/glitter-shiny.gif",
+  music: "https://media1.tenor.com/m/oOthH4sX3J4AAAAC/music-notes.gif",
+  skull: "https://media1.tenor.com/m/dWJ2-XMaZdQAAAAC/skull-fire.gif",
+  rainbow: "https://media1.tenor.com/m/89P9EKSfjS0AAAAC/rainbow.gif",
+  butterfly: "https://media1.tenor.com/m/QOKgNmYFjNQAAAAC/butterfly.gif"
 };
 
 // Lactopulga Welcome Component
