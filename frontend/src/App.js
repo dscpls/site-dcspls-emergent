@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 const BAND_INFO = {
   name: "DISCÍPULOS",
   spotify: "https://open.spotify.com/intl-pt/artist/5C5ggWPG2OVPxwd6QDdp61",
+  spotifyEmbed: "https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0",
   instagram: "https://instagram.com/discipulosabanda",
   tiktok: "https://tiktok.com/@discipulosabanda",
   youtube: "https://youtube.com/@ABandaDISCIPULOS",
@@ -22,17 +23,13 @@ const MEMBERS = [
   { name: "Nilhipp", role: "Produtor", location: "PR", color: "#FFD700" }
 ];
 
-// 2000s GIFs - Classic MySpace era
-const GIFS = {
-  fire: "https://media1.tenor.com/m/y0Z54DeAx5gAAAAC/fire.gif",
-  fire2: "https://media1.tenor.com/m/kxT2-SqKj4wAAAAC/fire-flames.gif",
-  stars: "https://media1.tenor.com/m/AaFo4lz4m-4AAAAd/stars-twinkle.gif",
-  sparkle: "https://media1.tenor.com/m/UhzY87gPzDUAAAAC/glitter-shiny.gif",
-  music: "https://media1.tenor.com/m/oOthH4sX3J4AAAAC/music-notes.gif",
-  skull: "https://media1.tenor.com/m/dWJ2-XMaZdQAAAAC/skull-fire.gif",
-  rainbow: "https://media1.tenor.com/m/89P9EKSfjS0AAAAC/rainbow.gif",
-  butterfly: "https://media1.tenor.com/m/QOKgNmYFjNQAAAAC/butterfly.gif"
-};
+// CSS Animated Icons (MySpace style)
+const FireIcon = () => <span className="fire-icon">🔥</span>;
+const StarIcon = () => <span className="star-icon">⭐</span>;
+const SparkleIcon = () => <span className="sparkle-icon">✨</span>;
+const HeartIcon = () => <span className="heart-icon">💖</span>;
+const MusicIcon = () => <span className="music-icon">🎵</span>;
+const SkullIcon = () => <span className="skull-icon">💀</span>;
 
 // Lactopulga Welcome Component
 const LactopulgaWelcome = () => (
@@ -48,10 +45,8 @@ const LactopulgaWelcome = () => (
         <p className="lactopulga-sub">~* clica ai pra conhecer a gente *~</p>
       </div>
     </div>
-  <div className="welcome-gifs">
-      <img src={GIFS.fire} alt="fire" className="welcome-gif" />
-      <img src={GIFS.sparkle} alt="sparkle" className="welcome-gif" />
-      <img src={GIFS.fire} alt="fire" className="welcome-gif" />
+    <div className="welcome-icons">
+      <FireIcon /><SparkleIcon /><FireIcon />
     </div>
   </div>
 );
@@ -87,19 +82,16 @@ const HomePage = () => (
       <h1 className="band-title" data-testid="band-title">DISCÍPULOS</h1>
       <p className="tagline blink">★ HIP-HOP ALTERNATIVO ★</p>
       
-      <div className="gif-container">
-        <img src={GIFS.fire} alt="fire" className="decorative-gif" />
-        <img src={GIFS.sparkle} alt="sparkle" className="decorative-gif" />
-        <img src={GIFS.fire} alt="fire" className="decorative-gif" />
+      <div className="icon-container">
+        <FireIcon /><StarIcon /><SparkleIcon /><StarIcon /><FireIcon />
       </div>
       
       <div className="spotify-embed" data-testid="spotify-embed">
         <iframe 
-          src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0" 
+          src={BAND_INFO.spotifyEmbed}
           width="100%" 
           height="152" 
           frameBorder="0" 
-          allowFullScreen 
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
           loading="lazy"
           title="Spotify Player"
@@ -113,10 +105,8 @@ const HomePage = () => (
         <a href={BAND_INFO.spotify} target="_blank" rel="noopener noreferrer" className="social-btn spotify" data-testid="link-spotify">SPOTIFY</a>
       </div>
       
-      <div className="gif-row">
-        <img src={GIFS.stars} alt="stars" className="decorative-gif small" />
-        <img src={GIFS.rainbow} alt="rainbow" className="decorative-gif small" />
-        <img src={GIFS.stars} alt="stars" className="decorative-gif small" />
+      <div className="icon-row">
+        <HeartIcon /><MusicIcon /><SparkleIcon /><MusicIcon /><HeartIcon />
       </div>
     </div>
   </div>
@@ -136,7 +126,7 @@ const SobrePage = () => (
       </div>
       <div className="window-content">
         <div className="about-content">
-          <img src={GIFS.fire} alt="fire" className="about-gif" />
+          <div className="icon-row"><FireIcon /><SkullIcon /><FireIcon /></div>
           
           <h2 className="section-title">QUEM SOMOS</h2>
           <p className="about-text">
@@ -166,7 +156,7 @@ const SobrePage = () => (
             </div>
           </div>
           
-          <img src={GIFS.sparkle} alt="sparkle" className="about-gif" />
+          <div className="icon-row"><SparkleIcon /><StarIcon /><SparkleIcon /></div>
         </div>
       </div>
     </div>
@@ -187,18 +177,17 @@ const DiscografiaPage = () => (
       </div>
       <div className="window-content">
         <div className="disco-intro">
-          <img src={GIFS.music} alt="music" className="disco-gif" />
+          <MusicIcon />
           <p className="disco-text">OUÇA NOSSA MÚSICA NO SPOTIFY</p>
-          <img src={GIFS.music} alt="music" className="disco-gif" />
+          <MusicIcon />
         </div>
         
         <div className="spotify-full" data-testid="spotify-full-player">
           <iframe 
-            src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0" 
+            src={BAND_INFO.spotifyEmbed}
             width="100%" 
             height="450" 
             frameBorder="0" 
-            allowFullScreen 
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"
             title="Spotify Full Player"
@@ -211,10 +200,8 @@ const DiscografiaPage = () => (
           </a>
         </div>
         
-        <div className="gif-row" style={{ marginTop: '20px' }}>
-          <img src={GIFS.fire} alt="fire" className="decorative-gif small" />
-          <img src={GIFS.music} alt="music" className="decorative-gif small" />
-          <img src={GIFS.fire} alt="fire" className="decorative-gif small" />
+        <div className="icon-row" style={{ marginTop: '20px' }}>
+          <FireIcon /><MusicIcon /><StarIcon /><MusicIcon /><FireIcon />
         </div>
       </div>
     </div>
@@ -251,16 +238,14 @@ const MembrosPage = () => (
               <p className="member-role">{member.role}</p>
               <p className="member-location">📍 {member.location}</p>
               <div className="member-decoration">
-                <span>★</span><span>★</span><span>★</span>
+                <StarIcon /><StarIcon /><StarIcon />
               </div>
             </div>
           ))}
         </div>
         
-        <div className="gif-decoration">
-          <img src={GIFS.fire} alt="fire" className="bottom-gif" />
-          <img src={GIFS.skull} alt="skull" className="bottom-gif" />
-          <img src={GIFS.fire} alt="fire" className="bottom-gif" />
+        <div className="icon-row" style={{ marginTop: '30px' }}>
+          <FireIcon /><SkullIcon /><SparkleIcon /><SkullIcon /><FireIcon />
         </div>
       </div>
     </div>
@@ -312,9 +297,9 @@ function App() {
       </main>
       <footer className="footer" data-testid="footer">
         <p>© 2024 DISCÍPULOS - TODOS OS DIREITOS RESERVADOS</p>
-        <p className="footer-sub">MADE WITH ♥ AND NOSTALGIA</p>
+        <p className="footer-sub">MADE WITH <HeartIcon /> AND NOSTALGIA</p>
         <div className="visitor-counter">
-          <img src={GIFS.sparkle} alt="sparkle" className="counter-gif" />
+          <SparkleIcon />
           <span>VISITANTE #000{Math.floor(Math.random() * 9999)}</span>
         </div>
       </footer>
