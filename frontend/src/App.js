@@ -315,11 +315,23 @@ const MembrosPage = () => (
               style={{ borderColor: member.color }}
               data-testid={`member-${index}`}
             >
-              <div className="member-avatar" style={{ borderColor: member.color }}>
-                <span className="avatar-letter" style={{ color: member.color }}>
-                  {member.name.charAt(0)}
-                </span>
-              </div>
+              {member.instagram ? (
+                <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="member-avatar-link">
+                  <div className="member-avatar" style={{ borderColor: member.color }}>
+                    <img 
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/960px-Instagram_logo_2022.svg.png" 
+                      alt="Instagram" 
+                      className="instagram-icon"
+                    />
+                  </div>
+                </a>
+              ) : (
+                <div className="member-avatar" style={{ borderColor: member.color }}>
+                  <span className="avatar-letter" style={{ color: member.color }}>
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+              )}
               <h3 className="member-name" style={{ color: member.color }}>{member.name}</h3>
               <p className="member-role">{member.role}</p>
               <p className="member-location">📍 {member.location}</p>
