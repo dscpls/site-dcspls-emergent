@@ -645,6 +645,16 @@ body {
   box-shadow: 0 0 30px currentColor;
 }
 
+.member-avatar-link {
+  text-decoration: none;
+  display: block;
+}
+
+.member-avatar-link:hover .member-avatar {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px currentColor;
+}
+
 .member-avatar {
   width: 100px;
   height: 100px;
@@ -654,6 +664,13 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--bg-darker);
+  transition: all 0.3s ease;
+}
+
+.instagram-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .avatar-letter {
