@@ -136,7 +136,7 @@ const SobrePage = () => (
       </div>
       <div className="window-content">
         <div className="about-content">
-          <img src={GIFS.fire2} alt="fire" className="about-gif" />
+          <img src={GIFS.fire} alt="fire" className="about-gif" />
           
           <h2 className="section-title">QUEM SOMOS</h2>
           <p className="about-text">
