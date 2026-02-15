@@ -186,10 +186,12 @@ const DiscografiaPage = () => (
         
         <div className="spotify-full" data-testid="spotify-full-player">
           <iframe 
-            src={BAND_INFO.spotifyEmbed}
+            style={{borderRadius: "12px"}}
+            src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0"
             width="100%" 
             height="450" 
             frameBorder="0" 
+            allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"
             title="Spotify Full Player"
