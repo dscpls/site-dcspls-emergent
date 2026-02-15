@@ -114,9 +114,9 @@ const HomePage = () => (
       </div>
       
       <div className="gif-row">
-        <img src={GIFS.butterfly} alt="butterfly" className="decorative-gif small" />
-        <img src={GIFS.hearts} alt="hearts" className="decorative-gif small" />
-        <img src={GIFS.sparkle} alt="sparkle" className="decorative-gif small" />
+        <img src={GIFS.stars} alt="stars" className="decorative-gif small" />
+        <img src={GIFS.rainbow} alt="rainbow" className="decorative-gif small" />
+        <img src={GIFS.stars} alt="stars" className="decorative-gif small" />
       </div>
     </div>
   </div>
