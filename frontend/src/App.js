@@ -6,7 +6,6 @@ import Marquee from "react-fast-marquee";
 const BAND_INFO = {
   name: "DISCÍPULOS",
   spotify: "https://open.spotify.com/intl-pt/artist/5C5ggWPG2OVPxwd6QDdp61",
-  spotifyEmbed: "https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0",
   instagram: "https://instagram.com/discipulosabanda",
   tiktok: "https://tiktok.com/@discipulosabanda",
   youtube: "https://youtube.com/@ABandaDISCIPULOS",
@@ -23,13 +22,33 @@ const MEMBERS = [
   { name: "Nilhipp", role: "Produtor", location: "PR", color: "#FFD700" }
 ];
 
-// CSS Animated Icons (MySpace style)
-const FireIcon = () => <span className="fire-icon">🔥</span>;
-const StarIcon = () => <span className="star-icon">⭐</span>;
-const SparkleIcon = () => <span className="sparkle-icon">✨</span>;
-const HeartIcon = () => <span className="heart-icon">💖</span>;
-const MusicIcon = () => <span className="music-icon">🎵</span>;
-const SkullIcon = () => <span className="skull-icon">💀</span>;
+const VIDEOS = [
+  { id: "OEIS-xgXQzs", title: "DISCÍPULOS - Vídeo 1" },
+  { id: "WtwCkBN3i-M", title: "DISCÍPULOS - Vídeo 2" },
+  { id: "8evJDQapvHs", title: "DISCÍPULOS - Vídeo 3" }
+];
+
+// Now Playing Component (Fixed position)
+const NowPlaying = () => (
+  <div className="now-playing" data-testid="now-playing">
+    <div className="np-header">
+      <span className="np-icon">♫</span>
+      <span className="np-title">NOW PLAYING</span>
+    </div>
+    <div className="np-content">
+      <iframe 
+        src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0"
+        width="100%" 
+        height="80" 
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy"
+        title="Now Playing"
+        style={{borderRadius: "8px"}}
+      />
+    </div>
+  </div>
+);
 
 // Lactopulga Welcome Component
 const LactopulgaWelcome = () => (
@@ -46,7 +65,9 @@ const LactopulgaWelcome = () => (
       </div>
     </div>
     <div className="welcome-icons">
-      <FireIcon /><SparkleIcon /><FireIcon />
+      <span className="animated-icon fire">🔥</span>
+      <span className="animated-icon sparkle">✨</span>
+      <span className="animated-icon fire">🔥</span>
     </div>
   </div>
 );
@@ -55,14 +76,14 @@ const LactopulgaWelcome = () => (
 const NavBar = ({ currentPage, setCurrentPage }) => (
   <nav className="navbar" data-testid="navbar">
     <div className="nav-container">
-      {["home", "sobre", "discografia", "membros", "merch"].map((page) => (
+      {["home", "sobre", "discografia", "videos", "membros", "merch"].map((page) => (
         <button
           key={page}
           data-testid={`nav-${page}`}
           className={`nav-btn ${currentPage === page ? "active" : ""}`}
           onClick={() => page === "merch" ? window.open(BAND_INFO.merch, "_blank") : setCurrentPage(page)}
         >
-          {page === "merch" ? "★ MERCH ★" : page.toUpperCase()}
+          {page === "merch" ? "★ MERCH ★" : page === "videos" ? "VÍDEOS" : page.toUpperCase()}
         </button>
       ))}
     </div>
@@ -75,29 +96,15 @@ const HomePage = () => (
     <div className="hero">
       <LactopulgaWelcome />
       
-      <div className="logo-container">
-        <img src={BAND_INFO.logo} alt="DISCÍPULOS" className="band-logo" data-testid="band-logo" />
-      </div>
-      
       <h1 className="band-title" data-testid="band-title">DISCÍPULOS</h1>
       <p className="tagline blink">★ HIP-HOP ALTERNATIVO ★</p>
       
       <div className="icon-container">
-        <FireIcon /><StarIcon /><SparkleIcon /><StarIcon /><FireIcon />
-      </div>
-      
-      <div className="spotify-embed" data-testid="spotify-embed">
-        <iframe 
-          style={{borderRadius: "12px"}}
-          src="https://open.spotify.com/embed/artist/5C5ggWPG2OVPxwd6QDdp61?utm_source=generator&theme=0"
-          width="100%" 
-          height="152" 
-          frameBorder="0" 
-          allowFullScreen
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-          loading="lazy"
-          title="Spotify Player"
-        />
+        <span className="animated-icon fire">🔥</span>
+        <span className="animated-icon star">⭐</span>
+        <span className="animated-icon sparkle">✨</span>
+        <span className="animated-icon star">⭐</span>
+        <span className="animated-icon fire">🔥</span>
       </div>
       
       <div className="social-links" data-testid="social-links">
@@ -108,7 +115,11 @@ const HomePage = () => (
       </div>
       
       <div className="icon-row">
-        <HeartIcon /><MusicIcon /><SparkleIcon /><MusicIcon /><HeartIcon />
+        <span className="animated-icon heart">💖</span>
+        <span className="animated-icon music">🎵</span>
+        <span className="animated-icon sparkle">✨</span>
+        <span className="animated-icon music">🎵</span>
+        <span className="animated-icon heart">💖</span>
       </div>
     </div>
   </div>
@@ -128,7 +139,11 @@ const SobrePage = () => (
       </div>
       <div className="window-content">
         <div className="about-content">
-          <div className="icon-row"><FireIcon /><SkullIcon /><FireIcon /></div>
+          <div className="icon-row">
+            <span className="animated-icon fire">🔥</span>
+            <span className="animated-icon skull">💀</span>
+            <span className="animated-icon fire">🔥</span>
+          </div>
           
           <h2 className="section-title">QUEM SOMOS</h2>
           <p className="about-text">
@@ -158,7 +173,11 @@ const SobrePage = () => (
             </div>
           </div>
           
-          <div className="icon-row"><SparkleIcon /><StarIcon /><SparkleIcon /></div>
+          <div className="icon-row">
+            <span className="animated-icon sparkle">✨</span>
+            <span className="animated-icon star">⭐</span>
+            <span className="animated-icon sparkle">✨</span>
+          </div>
         </div>
       </div>
     </div>
@@ -179,9 +198,9 @@ const DiscografiaPage = () => (
       </div>
       <div className="window-content">
         <div className="disco-intro">
-          <MusicIcon />
+          <span className="animated-icon music">🎵</span>
           <p className="disco-text">OUÇA NOSSA MÚSICA NO SPOTIFY</p>
-          <MusicIcon />
+          <span className="animated-icon music">🎵</span>
         </div>
         
         <div className="spotify-full" data-testid="spotify-full-player">
@@ -191,7 +210,6 @@ const DiscografiaPage = () => (
             width="100%" 
             height="450" 
             frameBorder="0" 
-            allowFullScreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"
             title="Spotify Full Player"
@@ -205,7 +223,64 @@ const DiscografiaPage = () => (
         </div>
         
         <div className="icon-row" style={{ marginTop: '20px' }}>
-          <FireIcon /><MusicIcon /><StarIcon /><MusicIcon /><FireIcon />
+          <span className="animated-icon fire">🔥</span>
+          <span className="animated-icon music">🎵</span>
+          <span className="animated-icon star">⭐</span>
+          <span className="animated-icon music">🎵</span>
+          <span className="animated-icon fire">🔥</span>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+// Videos Page
+const VideosPage = () => (
+  <div className="page videos-page" data-testid="videos-page">
+    <div className="window wide">
+      <div className="window-header">
+        <span className="window-title">▶ VÍDEOS ▶</span>
+        <div className="window-controls">
+          <span className="control">_</span>
+          <span className="control">□</span>
+          <span className="control">X</span>
+        </div>
+      </div>
+      <div className="window-content">
+        <div className="disco-intro">
+          <span className="animated-icon star">⭐</span>
+          <p className="disco-text">ASSISTA NOSSOS CLIPES</p>
+          <span className="animated-icon star">⭐</span>
+        </div>
+        
+        <div className="videos-grid" data-testid="videos-grid">
+          {VIDEOS.map((video, index) => (
+            <div key={video.id} className="video-card" data-testid={`video-${index}`}>
+              <div className="video-embed">
+                <iframe
+                  width="100%"
+                  height="200"
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="cta-box">
+          <a href={BAND_INFO.youtube} target="_blank" rel="noopener noreferrer" className="cta-btn" data-testid="youtube-cta">
+            ▶ VER MAIS NO YOUTUBE ◀
+          </a>
+        </div>
+        
+        <div className="icon-row" style={{ marginTop: '20px' }}>
+          <span className="animated-icon fire">🔥</span>
+          <span className="animated-icon sparkle">✨</span>
+          <span className="animated-icon fire">🔥</span>
         </div>
       </div>
     </div>
@@ -242,14 +317,20 @@ const MembrosPage = () => (
               <p className="member-role">{member.role}</p>
               <p className="member-location">📍 {member.location}</p>
               <div className="member-decoration">
-                <StarIcon /><StarIcon /><StarIcon />
+                <span className="animated-icon star small">⭐</span>
+                <span className="animated-icon star small">⭐</span>
+                <span className="animated-icon star small">⭐</span>
               </div>
             </div>
           ))}
         </div>
         
         <div className="icon-row" style={{ marginTop: '30px' }}>
-          <FireIcon /><SkullIcon /><SparkleIcon /><SkullIcon /><FireIcon />
+          <span className="animated-icon fire">🔥</span>
+          <span className="animated-icon skull">💀</span>
+          <span className="animated-icon sparkle">✨</span>
+          <span className="animated-icon skull">💀</span>
+          <span className="animated-icon fire">🔥</span>
         </div>
       </div>
     </div>
@@ -284,6 +365,8 @@ function App() {
         return <SobrePage />;
       case "discografia":
         return <DiscografiaPage />;
+      case "videos":
+        return <VideosPage />;
       case "membros":
         return <MembrosPage />;
       default:
@@ -299,11 +382,12 @@ function App() {
       <main className="main-content">
         {renderPage()}
       </main>
+      <NowPlaying />
       <footer className="footer" data-testid="footer">
         <p>© 2024 DISCÍPULOS - TODOS OS DIREITOS RESERVADOS</p>
-        <p className="footer-sub">MADE WITH <HeartIcon /> AND NOSTALGIA</p>
+        <p className="footer-sub">MADE WITH <span className="animated-icon heart small">💖</span> AND NOSTALGIA</p>
         <div className="visitor-counter">
-          <SparkleIcon />
+          <span className="animated-icon sparkle small">✨</span>
           <span>VISITANTE #000{Math.floor(Math.random() * 9999)}</span>
         </div>
       </footer>
