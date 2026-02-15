@@ -384,7 +384,7 @@ function App() {
       </main>
       <NowPlaying />
       <footer className="footer" data-testid="footer">
-        <p>© 2024 DISCÍPULOS - TODOS OS DIREITOS RESERVADOS</p>
+        <p>© 2026 DISCÍPULOS - TODOS OS DIREITOS RESERVADOS</p>
         <p className="footer-sub">MADE WITH <span className="animated-icon heart small">💖</span> AND NOSTALGIA</p>
         <div className="visitor-counter">
           <span className="animated-icon sparkle small">✨</span>
